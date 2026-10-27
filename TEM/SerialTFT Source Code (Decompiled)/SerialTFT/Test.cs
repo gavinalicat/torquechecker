@@ -130,11 +130,6 @@ namespace SerialTFT
 			label1.Visible = false;
 		}
 
-		private void Test_Load(object sender, EventArgs e)
-		{
-			MultiLanguage.LoadLanguage(this, typeof(Test));
-		}
-
 		private void Test_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			if (base.Visible && MessageBox.Show("Are you sure you want to exit the application?              ", "Exit", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.Cancel)
@@ -434,18 +429,6 @@ namespace SerialTFT
 		private void button5_Click(object sender, EventArgs e)
 		{
 			Close();
-		}
-
-		private void englishToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			MultiLanguage.SetDefaultLanguage("en-US");
-			MultiLanguage.LoadLanguage(this, typeof(Test));
-		}
-
-		private void chineseToolStripMenuItem_Click(object sender, EventArgs e)
-		{
-			MultiLanguage.SetDefaultLanguage("zh-CN");
-			MultiLanguage.LoadLanguage(this, typeof(Test));
 		}
 
 		private void button6_Click(object sender, EventArgs e)

@@ -49,15 +49,9 @@ namespace SerialTFT
 
 		private Label label1;
 
-		private ToolStripMenuItem languageToolStripMenuItem;
-
 		private ToolStripMenuItem openToolStripMenuItem;
 
 		private ToolStripMenuItem exitToolStripMenuItem;
-
-		private ToolStripMenuItem englishToolStripMenuItem;
-
-		private ToolStripMenuItem chineseToolStripMenuItem;
 
 		private Button button6;
 
@@ -82,9 +76,6 @@ namespace SerialTFT
 			this.File = new System.Windows.Forms.ToolStripMenuItem();
 			this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-			this.chineseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -125,7 +116,6 @@ namespace SerialTFT
 			this.TimesUp.Name = "TimesUp";
 			this.TimesUp.Value = new decimal(new int[4] { 1, 0, 0, 0 });
 			resources.ApplyResources(this.menuStrip1, "menuStrip1");
-			this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.File, this.languageToolStripMenuItem });
 			this.menuStrip1.Name = "menuStrip1";
 			resources.ApplyResources(this.File, "File");
 			this.File.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.openToolStripMenuItem, this.exitToolStripMenuItem });
@@ -134,15 +124,6 @@ namespace SerialTFT
 			this.openToolStripMenuItem.Name = "openToolStripMenuItem";
 			resources.ApplyResources(this.exitToolStripMenuItem, "exitToolStripMenuItem");
 			this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-			resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
-			this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.englishToolStripMenuItem, this.chineseToolStripMenuItem });
-			this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
-			resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
-			this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
-			this.englishToolStripMenuItem.Click += new System.EventHandler(englishToolStripMenuItem_Click);
-			resources.ApplyResources(this.chineseToolStripMenuItem, "chineseToolStripMenuItem");
-			this.chineseToolStripMenuItem.Name = "chineseToolStripMenuItem";
-			this.chineseToolStripMenuItem.Click += new System.EventHandler(chineseToolStripMenuItem_Click);
 			resources.ApplyResources(this.statusStrip1, "statusStrip1");
 			this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[2] { this.toolStripStatusLabel1, this.toolStripStatusLabel2 });
 			this.statusStrip1.Name = "statusStrip1";
