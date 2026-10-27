@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <!-- The original SerialTFT.exe (2019) was built for .NET Framework 2.0. 4.8 ships with Windows 10/11; the code is unchanged. -->
+    <TargetFramework>net48</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <RootNamespace>SerialTFT</RootNamespace>
+    <AssemblyName>SerialTFT</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <LangVersion>7.3</LangVersion>
+  </PropertyGroup>
+
+  <!-- Building from the command line (`dotnet build`) needs this to embed the form's non-string
+       resources (sizes, fonts, layout) for a .NET Framework target. Visual Studio builds don't. -->
+  <PropertyGroup Condition="'$(MSBuildRuntimeType)' == 'Core'">
+    <GenerateResourceUsePreserializedResources>true</GenerateResourceUsePreserializedResources>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(MSBuildRuntimeType)' == 'Core'">
+    <PackageReference Include="System.Resources.Extensions" Version="8.0.0" />
+  </ItemGroup>
+
+</Project>
